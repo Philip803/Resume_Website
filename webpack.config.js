@@ -9,10 +9,13 @@ module.exports = {
     filename: "bundle.js"
   },
   devtool: "source-maps",
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
   module: {
     rules: [
       {
-        test: /.jsx$/,
+        test: /jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader"
       }
